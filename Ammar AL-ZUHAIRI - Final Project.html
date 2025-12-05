@@ -59,17 +59,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="Untitled_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Untitled_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="Untitled_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="Untitled_files/libs/quarto-html/popper.min.js"></script>
-<script src="Untitled_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Untitled_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Untitled_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Untitled_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Untitled_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Untitled_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Untitled_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Ammar AL-ZUHAIRI - Final Project_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Ammar AL-ZUHAIRI - Final Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Ammar AL-ZUHAIRI - Final Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Ammar AL-ZUHAIRI - Final Project_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -1630,8 +1630,8 @@ check_diff              1.073302   1        1.036003</code></pre>
 </div>
 </section>
 </section>
-<section id="choosing-the-best-model-using-elastic-net" class="level2">
-<h2 class="anchored" data-anchor-id="choosing-the-best-model-using-elastic-net">Choosing the best model using Elastic Net</h2>
+<section id="choosing-the-best-model-using-elastic-net-k-fold-cross-validation" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-best-model-using-elastic-net-k-fold-cross-validation">Choosing the best model using Elastic Net K-fold cross validation</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -1666,9 +1666,8 @@ Attaching package: 'Matrix'</code></pre>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  alpha_cv <span class="ot">&lt;-</span> <span class="fu">c</span>(alpha_cv,lam_a<span class="sc">$</span>cvm[lam_a<span class="sc">$</span>lambda <span class="sc">==</span> lambda_min])</span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Best alpha</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>best_alpha <span class="ot">&lt;-</span> alpha[<span class="fu">which.min</span>(alpha_cv)]</span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>best_alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>best_alpha <span class="ot">&lt;-</span> alpha[<span class="fu">which.min</span>(alpha_cv)]</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>best_alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>

@@ -137,7 +137,7 @@ A constructed game with:
 | opening | Italian Game |
 
 **Predicted probability White wins:**  
-**0.6311 → 63.11%**
+**0.673089 → 67.30%**
 
 ---
 
