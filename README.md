@@ -1,5 +1,4 @@
-# STAT 408 Final Project – Chess Game Outcome Prediction
-**Author:** *Ammar Al-Zuhairi*
+# Chess Game Outcome Prediction
 
 ---
 
